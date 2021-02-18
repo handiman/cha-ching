@@ -10,19 +10,27 @@ const Oyster = () => <img style={{ margin: 5 }} width="100" src="assets/img/oyst
 const useStyles = makeStyles(_ => ({
   moola: {
     position: 'absolute',
+    left: 0,
+    top: 0,
     zIndex: 1,
     margin: 0,
     padding: 0,
+    display: 'table',
     height: '100vh',
     width: '100%',
-    lineHeight: '100vh',
-    textAlign: 'center',
     color: '#81644D',
-    fontFamily: 'Open Sans',
-    fontSize: 120,
-    '& span': {
-      paddingLeft: 5,
-      fontSize: 40
+    fontFamily: ['Arial', 'Helvetica', 'sans-serif'].join(','),
+    fontSize: '33vw',
+    '& > div': {
+      display: 'table-cell',
+      textAlign: 'center',
+      verticalAlign: 'middle',
+      height: '100vh',
+      width: '100%',
+      '& span': {
+        paddingLeft: 5,
+        fontSize: '25%'
+      }
     }
   }
 }));
@@ -50,8 +58,10 @@ const ChaChing: React.FC<{
   return (
     <React.Fragment>
       <div className={classes.moola}>
-        {Math.floor(moola)}
-        <span>kr</span>
+        <div>
+          {Math.floor(moola)}
+          <span>kr</span>
+        </div>
       </div>
       {[...Array(oysters)].map((_, index) => (
         <Oyster key={index} />

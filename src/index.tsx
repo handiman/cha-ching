@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { makeStyles } from '@material-ui/core';
 
-const HOURLY_RATE = 800;
+const HOURLY_RATE = 870;
 const OYSTER_PRICE = 25;
 const REFRESH_RATE = .25;
 const Oyster = () => <img style={{ margin: 5 }} width="100" src="assets/img/oyster.png" alt="Yum" />;
